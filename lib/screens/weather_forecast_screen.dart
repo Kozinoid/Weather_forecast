@@ -66,7 +66,7 @@ class _WeatherForecastScreenState extends State<WeatherForecastScreen> {
               else{
                 return Center(
                     child: SpinKitDoubleBounce(
-                        color: Colors.black87,
+                        color: Colors.white,
                         size: 200.0
                     )
                 );

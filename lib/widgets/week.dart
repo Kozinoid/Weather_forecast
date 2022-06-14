@@ -31,7 +31,7 @@ class WeekView extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(16.0)),
                     ),
-                    color: cardBackColor,
+                    color: cardBackColor, // <----------------------------------
                     child: forecastCard(snapshot, index),
                   ),
                 );//Text('Text');//Text('${snapshot.data.list[index].temp.day}');

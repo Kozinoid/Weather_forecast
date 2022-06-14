@@ -28,7 +28,9 @@ class CityView extends StatelessWidget {
               //SizedBox(width: 10,),
               Column(
                 children: [
-                  Text('${snapshot.data.list[0].temp.day} °C', style: tempTextStyle,),
+                  Text(
+                    getTemperatureString(snapshot.data),
+                    style: tempTextStyle,),
                   Text('$description', style: subtitleTextStyle,)
                 ],
               )
@@ -40,4 +42,12 @@ class CityView extends StatelessWidget {
 
     );
   }
+}
+
+String getTemperatureString(WeatherForecast data){
+  var hour = DateTime.now().hour;
+  if (hour >=0 && hour < 6) return '${data.list[0].temp.night.round()} °C';
+  else if (hour >=6 && hour < 12) return '${data.list[0].temp.morn.round()} °C';
+  else if (hour >=12 && hour < 18) return '${data.list[0].temp.day.round()} °C';
+  else return '${data.list[0].temp.eve.round()} °C';
 }

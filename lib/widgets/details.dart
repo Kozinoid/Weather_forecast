@@ -5,15 +5,15 @@ import 'package:weather/styles/styles.dart';
 class DetailsView extends StatelessWidget {
   DetailsView({Key key, this.iconData, this.value, this.units}) : super(key: key);
 
-  IconData iconData;
-  int value;
-  String units;
+  final IconData iconData;
+  final int value;
+  final String units;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(iconData, color: textColor, size: 50),
+        Icon(iconData, color: textColor, size: 40),
         SizedBox(height: 10,),
         Text('$value', style: subtitleTextStyle,),
         SizedBox(height: 10,),
