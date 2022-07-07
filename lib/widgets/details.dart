@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:weather/styles/styles.dart';
 
 class DetailsView extends StatelessWidget {
@@ -13,11 +12,12 @@ class DetailsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Icon(iconData, color: textColor, size: 40),
-        SizedBox(height: 10,),
-        Text('$value', style: subtitleTextStyle,),
-        SizedBox(height: 10,),
-        Text('$units', style: subtitleTextStyle,),
+        Icon(iconData, color: lightTextColor, size: 40),
+        Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: Text('$value', style: getArimaTextStyle(16, greyTextColor, FontWeight.w600),),
+        ),
+        Text('$units', style: getArimaTextStyle(16, greyTextColor, FontWeight.w600),),
       ],
     );
   }

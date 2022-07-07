@@ -3,13 +3,9 @@ import 'package:weather/api/weather_api.dart';
 import 'package:weather/models/weekweathermodel.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:weather/styles/styles.dart';
-import 'package:weather/utilities/forecast_util.dart';
 import 'package:weather/widgets/city.dart';
-import 'package:weather/widgets/day.dart';
 import 'package:weather/widgets/detaillist.dart';
-import 'package:weather/widgets/details.dart';
 import 'package:weather/widgets/week.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class WeatherForecastScreen extends StatefulWidget {
   const WeatherForecastScreen({Key key}) : super(key: key);
@@ -32,9 +28,9 @@ class _WeatherForecastScreenState extends State<WeatherForecastScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: backgroundColor,
+      //backgroundColor: backgroundColor,
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: backgroundColor,
         title: Text('openweathermap.org'),
         centerTitle: true,
         leading: IconButton(
@@ -49,6 +45,14 @@ class _WeatherForecastScreenState extends State<WeatherForecastScreen> {
         ],
       ),
       body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage('images/sky_back.jpg'),
+          ),
+        ),
         child: FutureBuilder<WeatherForecast>(
             future: forecastObject,
             builder: (context, snapshot){
@@ -57,7 +61,6 @@ class _WeatherForecastScreenState extends State<WeatherForecastScreen> {
                   Column(
                     children: [
                       CityView(snapshot: snapshot),
-                      SizedBox(height: 30,),
                       DetailList(snapshot: snapshot),
                       WeekView(snapshot: snapshot),
                     ],

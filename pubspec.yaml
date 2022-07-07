@@ -49,8 +49,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+    - images/sky_back.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -64,12 +64,31 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+    - family: Arima
+      fonts:
+        - asset: fonts/Arima-Thin.ttf
+          style: normal
+          weight: 100
+        - asset: fonts/Arima-ExtraLight.ttf
+          style: normal
+          weight: 200
+        - asset: fonts/Arima-Light.ttf
+          style: normal
+          weight: 300
+        - asset: fonts/Arima-Regular.ttf
+          style: normal
+          weight: 400
+        - asset: fonts/Arima-Medium.ttf
+          style: normal
+          weight: 500
+        - asset: fonts/Arima-SemiBold.ttf
+          style: normal
+          weight: 600
+        - asset: fonts/Arima-Bold.ttf
+          style: normal
+          weight: 700
+
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

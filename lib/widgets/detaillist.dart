@@ -16,6 +16,7 @@ class DetailList extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20)
         ),
+        shadows: [BoxShadow( blurRadius: 5)],
       ),
       margin: EdgeInsets.symmetric(horizontal: 20),
       padding: EdgeInsets.symmetric(vertical: 20),

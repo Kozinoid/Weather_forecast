@@ -14,36 +14,27 @@ class WeekView extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        SizedBox(height: 50,),
-        Text('7-days weather forecast'.toUpperCase(), style: subtitleBoldTextStyle,),
+        Padding(
+          padding: const EdgeInsets.only(top: 30),
+          child: Text(
+            '7-days weather forecast'.toUpperCase(),
+            style: getArimaTextStyle(16, greyTextColor, FontWeight.w700),
+          ),
+        ),
         Container(
           height: 180,
           padding: EdgeInsets.symmetric(horizontal: 16, vertical: 30),
           child: ListView.separated(
               scrollDirection: Axis.horizontal,
-              separatorBuilder: (context, index) => SizedBox(width: 8,),
-              itemCount: 7,//snapshot.data.list.length,
-              itemBuilder: (context, index){
-                return Container(
-                  width: MediaQuery.of(context).size.width / 2.7,
-                  height: 140,
-                  child: Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(16.0)),
-                    ),
-                    color: cardBackColor, // <----------------------------------
-                    child: forecastCard(snapshot, index),
+              separatorBuilder: (context, index) => SizedBox(
+                    width: 8,
                   ),
-                );//Text('Text');//Text('${snapshot.data.list[index].temp.day}');
-              }
-          ),
+              itemCount: 7, //snapshot.data.list.length,
+              itemBuilder: (context, index) {
+                return forecastCard(context, snapshot, index);
+              }),
         )
       ],
     );
   }
 }
-
-//Text('7-days weather forecast'.toUpperCase(), style: subtitleTextStyle,),
-// SizedBox(height: 30,),
-// Text('7-days weather forecast'.toUpperCase(), style: subtitleTextStyle,),
-// SizedBox(height: 30,),
