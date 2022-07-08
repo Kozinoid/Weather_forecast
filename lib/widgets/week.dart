@@ -18,7 +18,7 @@ class WeekView extends StatelessWidget {
           padding: const EdgeInsets.only(top: 30),
           child: Text(
             '7-days weather forecast'.toUpperCase(),
-            style: getArimaTextStyle(16, greyTextColor, FontWeight.w700),
+            style: getArimaTextStyle(16, greyTextColor, FontWeight.w700, shadow: true),
           ),
         ),
         Container(

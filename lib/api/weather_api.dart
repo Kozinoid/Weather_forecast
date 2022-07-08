@@ -23,7 +23,7 @@ class WeatherAPI{
       return WeatherForecast.fromJson(json.decode(response.body));
     }
     else {
-      throw Exception('Error data');
+      throw Exception('Can\'t find city name');
     }
   }
 }

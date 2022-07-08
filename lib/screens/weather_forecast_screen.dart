@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather/api/weather_api.dart';
+import 'package:weather/dialogs/searchCityDialog.dart';
 import 'package:weather/models/weekweathermodel.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:weather/styles/styles.dart';
@@ -40,7 +41,19 @@ class _WeatherForecastScreenState extends State<WeatherForecastScreen> {
         actions: [
           IconButton(
               icon: Icon(Icons.location_city),
-              onPressed: () {}
+              onPressed: ()async{
+                _cityName = await searchCityDialog(context);
+                if (_cityName != '')
+                {
+                  try{
+                    forecastObject =
+                        WeatherAPI().fetchWeatherForecastWithCity(cityName: _cityName);
+                    setState((){});
+                  }catch(error){
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('error')));
+                  }
+                }
+              }
           ),
         ],
       ),

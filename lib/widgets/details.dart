@@ -15,9 +15,9 @@ class DetailsView extends StatelessWidget {
         Icon(iconData, color: lightTextColor, size: 40),
         Padding(
           padding: const EdgeInsets.only(top: 10),
-          child: Text('$value', style: getArimaTextStyle(16, greyTextColor, FontWeight.w600),),
+          child: Text('$value', style: getArimaTextStyle(20, greyTextColor, FontWeight.w600, shadow: true),),
         ),
-        Text('$units', style: getArimaTextStyle(16, greyTextColor, FontWeight.w600),),
+        Text('$units', style: getArimaTextStyle(16, greyTextColor, FontWeight.w600, shadow: true),),
       ],
     );
   }
