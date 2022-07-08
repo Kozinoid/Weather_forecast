@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:weather/models/weekweathermodel.dart';
+import 'package:weather/models/week_weather_model.dart';
 import 'package:weather/styles/styles.dart';
 
 import 'details.dart';

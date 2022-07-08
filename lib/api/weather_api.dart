@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 
 import 'package:http/http.dart' as http;
-import 'package:weather/models/weekweathermodel.dart';
+import 'package:weather/models/week_weather_model.dart';
 import 'package:weather/utilities/constants.dart';
 
 class WeatherAPI{

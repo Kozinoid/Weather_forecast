@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather/models/weekweathermodel.dart';
+import 'package:weather/models/week_weather_model.dart';
 import 'package:weather/styles/styles.dart';
 import 'package:weather/utilities/forecast_util.dart';
 
@@ -20,6 +20,7 @@ class CityView extends StatelessWidget {
 
         child: Column(
           children: [
+            //------------------------- City name ------------------------------
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: Text(
@@ -29,6 +30,7 @@ class CityView extends StatelessWidget {
                     shadow: true),
               ),
             ),
+            //--------------------------- Date ---------------------------------
             Padding(
               padding: const EdgeInsets.only(bottom: 10),
               child: Text(
@@ -41,18 +43,21 @@ class CityView extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                //---------------------- Weather icon --------------------------
                 Image.network(
                   icon,
                   scale: 0.5,
-                ), //color: textColor,
+                ),
                 Column(
                   children: [
+                    //--------------------- Temperature ------------------------
                     Text(
                       getTemperatureString(snapshot.data),
                       style: getArimaTextStyle(
                           28, lightTextColor, FontWeight.w700,
                           shadow: true),
                     ),
+                    //--------------------- Description ------------------------
                     Text(
                       '$description',
                       style: getArimaTextStyle(

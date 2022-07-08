@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:weather/models/weekweathermodel.dart';
+import 'package:weather/models/week_weather_model.dart';
 import 'package:weather/styles/styles.dart';
 
 import 'day.dart';
@@ -22,8 +22,8 @@ class WeekView extends StatelessWidget {
           ),
         ),
         Container(
-          height: 180,
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 30),
+          height: 290,
+          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
           child: ListView.separated(
               scrollDirection: Axis.horizontal,
               separatorBuilder: (context, index) => SizedBox(

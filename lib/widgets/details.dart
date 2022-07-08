@@ -15,10 +15,10 @@ class DetailsView extends StatelessWidget {
       //decoration: borderDecoration,
       child: Column(
         children: [
-          Icon(iconData, color: lightTextColor, size: 30),
+          Icon(iconData, color: lightTextColor, size: 22),
           Padding(
             padding: const EdgeInsets.only(top: 10),
-            child: Text('$value', style: getArimaTextStyle(24, lightTextColor, FontWeight.w600, shadow: true),),
+            child: Text('$value', style: getArimaTextStyle(22, lightTextColor, FontWeight.w600, shadow: true),),
           ),
           Text('$units', style: getArimaTextStyle(16, greyTextColor, FontWeight.w600, shadow: true),),
         ],

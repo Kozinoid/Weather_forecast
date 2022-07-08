@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:weather/api/weather_api.dart';
 import 'package:weather/dialogs/searchCityDialog.dart';
-import 'package:weather/models/weekweathermodel.dart';
+import 'package:weather/models/week_weather_model.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:weather/styles/styles.dart';
 import 'package:weather/widgets/city.dart';
