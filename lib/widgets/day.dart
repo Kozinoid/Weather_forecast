@@ -19,7 +19,6 @@ Widget forecastCard(
           side: BorderSide(
               width: 1, color: Colors.black, style: BorderStyle.solid),
         ),
-        //elevation: 5,
         shadowColor: Colors.transparent,
         color: cardTransparentBackColor,
         child: Padding(

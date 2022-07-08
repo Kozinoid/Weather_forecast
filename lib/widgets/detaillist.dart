@@ -11,13 +11,10 @@ class DetailList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: ShapeDecoration(
-        color: cardBackColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20)
-        ),
-        shadows: [BoxShadow( blurRadius: 5)],
-      ),
+
+      //=======  Decoration  =========
+      //decoration: borderDecoration,
+
       margin: EdgeInsets.symmetric(horizontal: 20),
       padding: EdgeInsets.symmetric(vertical: 20),
       //color: cardBackColor,

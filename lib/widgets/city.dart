@@ -14,47 +14,57 @@ class CityView extends StatelessWidget {
     var description =
         snapshot.data.list[0].weather[0].description.toUpperCase();
     return Container(
+
+        //=======  Decoration  =========
+        //decoration: borderDecoration,
+
         child: Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.only(top: 20),
-          child: Text(
-          '${snapshot.data.city.name} (${snapshot.data.city.country})',
-            textAlign: TextAlign.center,
-            style: getArimaTextStyle(26, greyTextColor, FontWeight.w600, shadow: true),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(bottom: 10),
-          child: Text(
-            '${Util.getFormattedDate(Util.getDateTimeFromMilliseconds(snapshot.data.list[0].dt))}',
-            textAlign: TextAlign.center,
-            style: getArimaTextStyle(16, greyTextColor, FontWeight.w500, shadow: true),
-          ),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.network(
-              icon,
-              scale: 0.5,
-            ), //color: textColor,
-            Column(
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Text(
+                '${snapshot.data.city.name} (${snapshot.data.city.country})',
+                textAlign: TextAlign.center,
+                style: getArimaTextStyle(26, greyTextColor, FontWeight.w500,
+                    shadow: true),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: Text(
+                '${Util.getFormattedDate(Util.getDateTimeFromMilliseconds(snapshot.data.list[0].dt))}',
+                textAlign: TextAlign.center,
+                style: getArimaTextStyle(16, greyTextColor, FontWeight.w500,
+                    shadow: true),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  getTemperatureString(snapshot.data),
-                  style: getArimaTextStyle(28, lightTextColor, FontWeight.w700, shadow: true),
-                ),
-                Text(
-                  '$description',
-                  style: getArimaTextStyle(16, greyTextColor, FontWeight.w400, shadow: true),
+                Image.network(
+                  icon,
+                  scale: 0.5,
+                ), //color: textColor,
+                Column(
+                  children: [
+                    Text(
+                      getTemperatureString(snapshot.data),
+                      style: getArimaTextStyle(
+                          28, lightTextColor, FontWeight.w700,
+                          shadow: true),
+                    ),
+                    Text(
+                      '$description',
+                      style: getArimaTextStyle(
+                          16, greyTextColor, FontWeight.w500,
+                          shadow: true),
+                    )
+                  ],
                 )
               ],
-            )
+            ),
           ],
-        ),
-      ],
-    ));
+        ));
   }
 }
 

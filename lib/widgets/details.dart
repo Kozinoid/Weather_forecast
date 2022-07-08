@@ -10,15 +10,19 @@ class DetailsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Icon(iconData, color: lightTextColor, size: 40),
-        Padding(
-          padding: const EdgeInsets.only(top: 10),
-          child: Text('$value', style: getArimaTextStyle(20, greyTextColor, FontWeight.w600, shadow: true),),
-        ),
-        Text('$units', style: getArimaTextStyle(16, greyTextColor, FontWeight.w600, shadow: true),),
-      ],
+    return Container(
+      width: 100,
+      //decoration: borderDecoration,
+      child: Column(
+        children: [
+          Icon(iconData, color: lightTextColor, size: 30),
+          Padding(
+            padding: const EdgeInsets.only(top: 10),
+            child: Text('$value', style: getArimaTextStyle(24, lightTextColor, FontWeight.w600, shadow: true),),
+          ),
+          Text('$units', style: getArimaTextStyle(16, greyTextColor, FontWeight.w600, shadow: true),),
+        ],
+      ),
     );
   }
 }
