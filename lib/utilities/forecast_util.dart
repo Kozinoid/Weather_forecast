@@ -1,5 +1,4 @@
 import 'package:intl/intl.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Util{
   static DateTime getDateTimeFromMilliseconds(int seconds) => DateTime.fromMillisecondsSinceEpoch(seconds * 1000);
